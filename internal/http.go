@@ -20,9 +20,19 @@ func RunServer() {
 
 func healthcheck(w http.ResponseWriter, r *http.Request) {
 	log.Debug().Msg("Triggering healthcheck")
-	response := &API{
-		Code:    200,
-		Message: "healthy",
+	var response API
+	if r.Method != http.MethodGet {
+		response = API{
+			Code:    405,
+			Message: "Method not allowed",
+		}
+		w.WriteHeader(http.StatusMethodNotAllowed)
+	} else {
+		response = API{
+			Code:    200,
+			Message: "healthy",
+		}
+		w.WriteHeader(http.StatusOK)
 	}
 	js, err := json.Marshal(response)
 	if err != nil {
