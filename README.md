@@ -1,5 +1,4 @@
-![PIG](https://e7.pngegg.com/pngimages/685/813/png-clipart-minecraft-story-mode-season-two-pig-video-game-baby-chair-game-angle.png)
-
+<img src="https://raw.githubusercontent.com/vutratenko/pig/main/pig.png" alt="PIG" width="200"/>
 # pig
 PIG - a dummy app
 
