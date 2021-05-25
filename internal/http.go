@@ -9,6 +9,7 @@ import (
 )
 
 func RunServer() {
+	log.Info().Msg("Running PIG Dummy Service on port 8000")
 	r := mux.NewRouter()
 	r.HandleFunc("/internal/healthz", healthcheck)
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("resources/"))))
