@@ -6,15 +6,15 @@
 
 To build project hit:
 
-go build
+`go build`
 
 To run tests hit:
 
-go test ./...
+`go test ./...`
 
 To run the app hit:
 
-go run main.go
+`go run main.go`
 
 
 
@@ -22,7 +22,7 @@ or run compiled binary
 
 
 
-./pig
+`./pig`
 
 
 ### Notes
